@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Desafio para o Seminário</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div id="menu-principal">
+    <ul>
+        <li>
+            <a href="http://127.0.0.1:5000">HOME</a>
+        </li>
+        <li>
+            <a href="http://127.0.0.1:5000/concorrentes">Sumário</a>
+        </li>
+        <li>
+            <a href="http://127.0.0.1:5000/concorrentes">Concorrente por Página</a>
+        </li>
+    </ul>
+    </div>
+    <div>
+    <form name="input" action="http://127.0.0.1:5000/concorrentes/codigo" method="get">
+        Código do Concorrente: 
+            <input id="codigo" type="text" name="codigo">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
