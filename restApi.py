@@ -1,6 +1,7 @@
 from logic import table, the_maker
-from flask import Flask, jsonify
+from flask import Flask, jsonify, json
 import flask
+from flask.templating import render_template
 
 app = Flask(__name__)
 
@@ -11,12 +12,14 @@ def hello():
 
 @app.route('/concorrentes')
 def concorrentes_sumario():
-    out = the_maker.maker().get_complet_json()
+    out = the_maker.maker().get_list()
     return jsonify(out)
 
-@app.route('/concorrentes/{pagina}')
+@app.route('/concorrentes/pagina')
 def concorrente_by_pag():
-    return 'Página em construção'
+    pag = flask.request.args.get('pagina')
+    out = the_maker.maker().get_pag(int(pag)-1)
+    return jsonify(out)
 
 @app.route('/concorrentes/codigo')
 def concorrentes_by_id():

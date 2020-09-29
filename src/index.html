@@ -13,18 +13,23 @@
     <div id="menu-principal">
     <ul>
         <li>
-            <a href="http://127.0.0.1:5000">HOME</a>
+            <a target="_blank" href="http://127.0.0.1:5000">HOME</a>
         </li>
         <li>
-            <a href="http://127.0.0.1:5000/concorrentes">Sumário</a>
-        </li>
-        <li>
-            <a href="http://127.0.0.1:5000/concorrentes">Concorrente por Página</a>
+            <a target="_blank" href="http://127.0.0.1:5000/concorrentes">Sumário</a>
         </li>
     </ul>
     </div>
     <div>
-    <form name="input" action="http://127.0.0.1:5000/concorrentes/codigo" method="get">
+        <form name="input" action="http://127.0.0.1:5000/concorrentes/pagina" target="_blank" method="get">
+            Concorrente por Página: 
+                <input id="pagina" type="text" name="pagina">
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </br>
+    <div>
+    <form name="input" action="http://127.0.0.1:5000/concorrentes/codigo" target="_blank" method="get">
         Código do Concorrente: 
             <input id="codigo" type="text" name="codigo">
             <input type="submit" value="Enviar">
